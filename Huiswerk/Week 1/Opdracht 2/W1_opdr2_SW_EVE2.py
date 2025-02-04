@@ -12,8 +12,6 @@ class boeken:
             self.uitgeleend = True
             print("Bedankt voor het lenen van het boek, veel lees plezier!")
 
-        
-
     def breng_terug(self):
         if self.uitgeleend == True:
             print("Bedankt voor het terug brengen van het boek!")
@@ -21,6 +19,12 @@ class boeken:
         else:
             print(f"Fout Het boek {self.titel} is uitgeleend.")
 
-    def __str__(self):
-        return F"Titel {self.titel}, auteur {self.auteur}, jaar {self.jaar}, uitgeleend: {self.uitgeleend}"
+    def status(self):
+        if self.uitgeleend == True:
+            status = "Ja"
+        else:
+            status = "Nee"
+        return status
 
+    def __str__(self):
+        return F"Titel {self.titel}, auteur {self.auteur}, jaar {self.jaar}, uitgeleend: {self.status}"
