@@ -4,6 +4,16 @@ class huisdier:
         self.soort = soort
         self.leeftijd = leeftijd
         self.honger = False
+        self.voedingsschema = []
+    
+    def voeg_maaltijd_toe(self):
+        for i in range (0, 7):
+            nieuwe_maaltijd = str(input(f"Geef maaltijden op voor {self.naam} van Ma/ Zondag: "))
+            self.voedingsschema.append(nieuwe_maaltijd)
+            i += 1
+    
+    def toon_voedingsschema(self):
+        print(f"Voedingschema {self.naam} Ma/ Zondag: ",*self.voedingsschema, sep='\n- ')
     
     def voed(self):
         if self.honger == True:
