@@ -1,19 +1,19 @@
-from spel import spel
+from spel import spel, spellenwinkel
 
+#Winkels
+winkel = spellenwinkel("Speeleiland", 4)
 
-spel1 = spel("Catan", 120)
-spel2 = spel("Monopoly", 40, "Bordspel")
+#Assortiment
+spel1 = spel("Catan", "strategie", 120)
+spel2 = spel("Monopoly", "bordspel", 90)
+spel3 = spel("Uno", "kaartspel", 30)
+spel4 = spel("Wingspan", "strategie", 40)
+spel5 = spel("Ganzenbord", "bordspel", 30)
 
-spel1.set_speelduur(-10)
-print(spel1)
-spel1.set_speelduur(60)
-print(spel1)
-spel1.set_speelduur(120)
+winkel.voeg_spel_toe(spel1)
+winkel.voeg_spel_toe(spel2)
+winkel.voeg_spel_toe(spel3)
+winkel.voeg_spel_toe(spel4)
+winkel.voeg_spel_toe(spel5)
 
-spel1.set_categorie("Strategie")
-print(spel1)
-spel1.set_categorie("Dobbelspel")
-print(spel1)
-
-spel2.set_categorie("Strategie")
-print(spel2)
+print(winkel)
