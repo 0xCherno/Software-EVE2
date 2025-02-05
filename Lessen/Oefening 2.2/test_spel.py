@@ -1,4 +1,5 @@
-from spel import spel, spellenwinkel
+from spel import spel
+from spellenwinkel import spellenwinkel
 
 #Winkels
 winkel = spellenwinkel("Speeleiland", 4)
