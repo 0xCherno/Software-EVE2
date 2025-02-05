@@ -1,5 +1,3 @@
-from spel import spel
-
 class spellenwinkel:
     def __init__(self, naam, capaciteit):
         self.naam = naam
