@@ -4,7 +4,7 @@ from spel import spel, spellenwinkel
 winkel = spellenwinkel("Speeleiland", 4)
 
 #Assortiment
-spel1 = spel("Catan", "strategie", 120)
+spel1 = spel("Catan", "strategie", 300)
 spel2 = spel("Monopoly", "bordspel", 90)
 spel3 = spel("Uno", "kaartspel", 30)
 spel4 = spel("Wingspan", "strategie", 40)
@@ -16,4 +16,4 @@ winkel.voeg_spel_toe(spel3)
 winkel.voeg_spel_toe(spel4)
 winkel.voeg_spel_toe(spel5)
 
-print(winkel)
+print(winkel.geef_langste_spel())
