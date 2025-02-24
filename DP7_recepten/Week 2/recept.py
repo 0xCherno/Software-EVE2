@@ -2,11 +2,12 @@ from ingredient import Ingredient
 from stap import Stap
 
 class Recept:
-    def __init__(self, naam, omschrijving):
+    def __init__(self, naam, omschrijving,):
         self.naam = naam
         self.omschrijving = omschrijving
         self.ingredient_list = []
         self.stap_list = []
+        self.aantal_personen = 1
     
     def voeg_ingredient_toe(self, ingredient: Ingredient):
         self.ingredient_list.append(ingredient)
@@ -28,5 +29,13 @@ class Recept:
                 f"{self.omschrijving}\n\n"
                 f"Ingrediënten:\n{ingredienten_str}\n\n"
                 f"Bereidingswijze:\n{stappen_str}\n")
-
+    
+    def set_aantal_personen(self, personen : int):
+        self.aantal_personen.append(personen)
+    
+    def get_aantal_personen(self):
+        return self.aantal_personen
+    
+    def get_plantaardig_recept(self, plantaardig : bool):
+        self.get_plantaardig_recept.append(plantaardig)
     
