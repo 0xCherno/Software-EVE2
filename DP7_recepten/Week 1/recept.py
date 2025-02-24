@@ -1,7 +1,7 @@
 from ingredient import Ingredient
 from stap import Stap
 
-class recept:
+class Recept:
     def __init__(self, naam, omschrijving):
         self.naam = naam
         self.omschrijving = omschrijving
@@ -27,6 +27,6 @@ class recept:
         return (f"{self.naam}\n\n"
                 f"{self.omschrijving}\n\n"
                 f"Ingrediënten:\n{ingredienten_str}\n\n"
-                f"Bereidingswijze:\n{stappen_str}")
+                f"Bereidingswijze:\n{stappen_str}\n")
 
     

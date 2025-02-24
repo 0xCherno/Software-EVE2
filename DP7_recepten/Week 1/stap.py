@@ -1,5 +1,5 @@
 class Stap:
-    def __init__(self, beschrijving: str):
+    def __init__(self, beschrijving):
         self.beschrijving = beschrijving
 
     def __str__(self):
