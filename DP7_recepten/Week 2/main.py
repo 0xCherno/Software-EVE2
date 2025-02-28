@@ -5,7 +5,7 @@ from data import Data
 
 def main():
 
-    recepten = Data.recepten #Lijst met ingredienten, recepten, etc staat in het bestandje data.py
+    recepten = Data.recepten  #Lijst met ingredienten, recepten, etc staat in het bestandje data.py
 
     while True:
         print("\n Beschikabre recepten:")
