@@ -19,30 +19,18 @@ def main():
             break
         try:
             keuze_index = int(keuze) - 1
+
             if 0 <= keuze_index < len(recepten):
                 recept = recepten[keuze_index]
-                aantal_personen = Recept.set_aantal_personen(recept, (int(input("Geef het aantal personen op: "))))
+                recept.set_aantal_personen(recept, (int(input("Geef het aantal personen op: "))))
                 plantaardig = Ingredient.get_ingredient(recept, str(input("Wil je een plantaardig alternatief? Ja/Nee: ").lower))
                 if plantaardig == "ja":
-                    print("done")
-
-                for i in range(aantal_personen):
+                    Ingredient.get_ingredient(plantaardig=True)
+                else:
+                    continue
+                for i in range(recept.get_aantal_personen(int)):
                     print("success\n")
-                
-
-                    
-                    
-
-
-                
-
-
-
-
-
-
-
-                # print("\n" + str(recepten[keuze_index]))
+                print("\n" + str(recepten[keuze_index]))
             else:
                 print("Ongeldige invoer, kies een nummer uit de lijst.")
         except ValueError:
