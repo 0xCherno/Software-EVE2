@@ -8,7 +8,6 @@ class Recept:
         self.ingredient_list = []
         self.stap_list = []
         self.aantal_personen = 1
-        self.plantaardig_recept = []
     
     def voeg_ingredient_toe(self, ingredient):
         self.ingredient_list.append(ingredient)
@@ -18,6 +17,9 @@ class Recept:
     
     def get_naam(self):
         return self.naam
+    
+    def get_omschrijving(self):
+        return self.omschrijving
     
     def voeg_stap_toe(self, stap):
         self.stap_list.append(stap)
@@ -31,7 +33,7 @@ class Recept:
                 f"Ingrediënten:\n{ingredienten_str}\n\n"
                 f"Bereidingswijze:\n{stappen_str}\n")
     
-    def set_aantal_personen(self, personen : int):
+    def set_aantal_personen(self, personen):
         self.aantal_personen = personen
     
     def get_aantal_personen(self):

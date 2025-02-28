@@ -4,12 +4,12 @@ class Ingredient:
         self.hoeveelheid = hoeveelheid
         self.eenheid = eenheid
         self.kcal = int(kcal)
-        self.plantaardig_alternatief = None
+        self.plantaardig_alternatief = Ingredient | None
 
     def get_kcal(self):
         return self.kcal
     
-    def set_hoeveelheid(self, hoeveelheid : float):
+    def set_hoeveelheid(self, hoeveelheid):
         self.hoeveelheid.append(hoeveelheid)
 
     def get_hoeveelheid(self):
@@ -18,7 +18,7 @@ class Ingredient:
     def set_plantaardig_alternatief(self, alternatief):
         self.plantaardig_alternatief = alternatief
     
-    def get_ingredient(self, plantaardig : bool):
+    def get_ingredient(self, plantaardig):
         if plantaardig == True:
             return self.plantaardig_alternatief
         else:
