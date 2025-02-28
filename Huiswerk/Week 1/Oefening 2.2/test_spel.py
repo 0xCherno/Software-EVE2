@@ -16,4 +16,4 @@ winkel.voeg_spel_toe(spel3)
 winkel.voeg_spel_toe(spel4)
 winkel.voeg_spel_toe(spel5)
 
-print(winkel.zoeken_spel("Ganzebord"))
+print(winkel.zoek_spel("Ganzenbord"))

@@ -19,6 +19,9 @@ class spel:
     def get_naam(self):
         return self.naam
     
+    def get_categorie(self):
+        return self.categorie
+    
     def set_categorie(self, categorie):
         if self.categorie == "???":
             self.categorie = categorie
@@ -49,10 +52,16 @@ class spellenwinkel:
     def geef_langste_spel(self):
         return max(self.spellen, key=lambda spel: spel.get_speelduur())
 
-    def zoeken_spel(self, naam):
+    def zoek_spel(self, naam):
         for spel in self.spellen:
             if spel.get_naam() == naam:
                 return naam
         print(f"Het spel {naam} is niet gevonden")
         return None
-            
+    
+    def geef_spellen(self, categorie):
+        for spel in self.spellen:
+            if spel.get_categorie() == categorie:
+                return spel
+        print(f"Er zijn geen spellen gevonden met de categorie {categorie}! Helaas...")
+        return None
