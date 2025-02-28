@@ -13,6 +13,7 @@ def main():
             print(f"{i}. {recept.get_naam()}")
 
         keuze = input("\nVoer het nummer in van het recept dat je wilt bekijken (Of q om het programma af te sluiten):")
+
         
         if keuze.lower() == "q":
             print("Programma afgesloten")

@@ -16,10 +16,13 @@ class Ingredient:
         return self.hoeveelheid
     
     def set_plantaardig_alternatief(self, alternatief):
-        self.plantaardig_alternatief.append(alternatief)
+        self.plantaardig_alternatief = alternatief
     
     def get_ingredient(self, plantaardig : bool):
-        return self.plantaardig_alternatief
+        if plantaardig == True:
+            return self.plantaardig_alternatief
+        else:
+            return self
 
     def __str__(self):
         return f"{self.hoeveelheid} {self.eenheid} {self.naam} {self.kcal}"

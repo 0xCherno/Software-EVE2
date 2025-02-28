@@ -32,7 +32,7 @@ class Recept:
                 f"Bereidingswijze:\n{stappen_str}\n")
     
     def set_aantal_personen(self, personen : int):
-        self.aantal_personen.append(personen)
+        self.aantal_personen = personen
     
     def get_aantal_personen(self):
         return self.aantal_personen

@@ -9,11 +9,13 @@ class Data:
     Anabolische_Kwark = Recept("Anabolische kwark", "Een grote bak kwark met 62gram eiwit en <500kcal!")
     Kip_Rijst_Brocoli = Recept("Kip Rijst en Brocoli", "Een gezonde maaltijd voor na het sporten")
 
+    
     Studenten_Pasta_Carbonara.voeg_ingredient_toe(Ingredient("Spaghetti", 75, "gram", 267))
     Studenten_Pasta_Carbonara.voeg_ingredient_toe(Ingredient("Voorgesneden spekjes", 50, "gram", 108 ))
     Studenten_Pasta_Carbonara.voeg_ingredient_toe(Ingredient("Ei dooiers", 2, "stuks", 110))
     Studenten_Pasta_Carbonara.voeg_ingredient_toe(Ingredient("Zwarte peper", 1, "Thee lepel(s)", 0))
     Studenten_Pasta_Carbonara.voeg_ingredient_toe(Ingredient("Paramgiano reggiano", 30, "gram", 120))
+    Ingredient.set_plantaardig_alternatief(Ingredient("Paramgiano reggiano", 30, "gram", 120), ("Vega Kaas", 20, "gram", 120))
     
     Studenten_Pasta_Carbonara.voeg_stap_toe(Stap("Kook de spaghetti volgens de aanwijzingen op de verpakking"))
     Studenten_Pasta_Carbonara.voeg_stap_toe(Stap("Bak de spekjes in een pan tot ze knapperig zijn"))
