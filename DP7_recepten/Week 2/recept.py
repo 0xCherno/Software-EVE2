@@ -33,8 +33,8 @@ class Recept:
                 f"Ingrediënten:\n{ingredienten_str}\n\n"
                 f"Bereidingswijze:\n{stappen_str}\n")
     
-    def set_aantal_personen(self, personen):
-        self.aantal_personen = personen
+    def set_aantal_personen(self, aantal):
+        self.aantal_personen = aantal
     
     def get_aantal_personen(self):
         return self.aantal_personen
