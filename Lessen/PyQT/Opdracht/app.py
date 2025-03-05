@@ -1,10 +1,14 @@
+#Importeren PyQt6
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
+
+#Importeren lijsten met feitjes
 from feiten_eng import Facts
 from feiten_nl import Feiten
 from feiten_frans import Faits
 from feiten_duits import Fakten
+
 import random
 
 feiten_eng = Facts
@@ -40,7 +44,6 @@ class MijnScherm(QWidget):
 
         self.output_venster = QTextEdit(self)
         self.output_venster.move(250, 600)
-        # self.output_venster.setFixedSize(400, 200)
         self.output_venster.setPlaceholderText("Output")
 
         self.setFixedSize(500, 700)
@@ -64,7 +67,7 @@ class MijnScherm(QWidget):
             self.output_venster.setPlainText(random.choice(feiten_frans))
         elif knop_naam == 'Genereer feit':
             self.output_venster.setPlainText(random.choice(feiten_nl))
-            
+
 app = QApplication([])
 scherm = MijnScherm()
 scherm.show()
