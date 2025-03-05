@@ -54,21 +54,17 @@ class MijnScherm(QWidget):
         self.setLayout(layout)
     
     def knop_ingedrukt(self):
-        self.sender()
         knop_naam = self.sender().text()
 
         if knop_naam == "Generate fact":
-            print(f"{random.choice(feiten_eng)}\n")
+            self.output_venster.setPlainText(random.choice(feiten_eng))
         elif knop_naam == 'Fakten erzeugen':
-            print(f"{random.choice(feiten_duits)}\n")
+            self.output_venster.setPlainText(random.choice(feiten_duits))
         elif knop_naam == 'Générer des faits':
-            print(f"{random.choice(feiten_frans)}\n")
+            self.output_venster.setPlainText(random.choice(feiten_frans))
         elif knop_naam == 'Genereer feit':
-            print(f"{random.choice(feiten_nl)}\n")
-        else:
-            print(f"Knop niet herkend {knop_naam}")
-        return
-
+            self.output_venster.setPlainText(random.choice(feiten_nl))
+            
 app = QApplication([])
 scherm = MijnScherm()
 scherm.show()
