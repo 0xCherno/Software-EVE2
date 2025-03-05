@@ -2,9 +2,16 @@ from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
 from random import choice
-from facts import Facts
+from Lessen.PyQT.Opdracht.feiten_eng import Facts
+from Lessen.PyQT.Opdracht.feiten_nl import Feiten
+from Lessen.PyQT.Opdracht.feiten_frans import Faits
+from Lessen.PyQT.Opdracht.feiten_duits import Fakten
 
-feiten = Facts
+
+feiten_eng = Facts
+feiten_nl = Feiten
+feiten_frans = Faits
+feiten_duits = Fakten
 
 class MijnScherm(QMainWindow):
     def __init__(self):
