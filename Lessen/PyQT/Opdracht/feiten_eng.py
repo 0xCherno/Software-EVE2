@@ -1,4 +1,4 @@
-facts = [
+Facts = [
     "A cloud weighs around a million tonnes.",
     "Giraffes are 30 times more likely to get hit by lightning than people.",
     "Identical twins don’t have the same fingerprints.",

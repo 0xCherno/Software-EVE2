@@ -2,10 +2,12 @@ from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
 from random import choice
-from Lessen.PyQT.Opdracht.feiten_eng import Facts
-from Lessen.PyQT.Opdracht.feiten_nl import Feiten
-from Lessen.PyQT.Opdracht.feiten_frans import Faits
-from Lessen.PyQT.Opdracht.feiten_duits import Fakten
+
+#Importeren van de lijsten
+from feiten_eng import Facts
+from feiten_nl import Feiten
+from feiten_frans import Faits
+from feiten_duits import Fakten
 
 
 feiten_eng = Facts
@@ -13,40 +15,45 @@ feiten_nl = Feiten
 feiten_frans = Faits
 feiten_duits = Fakten
 
-class MijnScherm(QMainWindow):
+class MijnScherm(QWidget):
     def __init__(self):
         super().__init__()
-        
+
         self.setWindowTitle("4 Knoppen & 50 feitjes!")
         self.x_keren_ingedrukt = 0
 
-        self.feit_engels = QPushButton("fact")
-        self.feit_engels.clicked.connect(self.knop_is_ingedrukt)
+        self.knop_engels = QPushButton("Generate fact")
+        self.knop_engels.clicked.connect(self.knop_ingedrukt)
+        self.knop_engels.move(64,32)
+        self.knop_engels.setFixedSize(200, 200)
 
-        self.feit_duits = QPushButton("Tatsache")
-        self.feit_duits.clicked.connect(self.knop_is_ingedrukt)
+        self.knop_duits = QPushButton("Fakten erzeugen")
+        self.knop_duits.clicked.connect(self.knop_ingedrukt)
+        self.knop_duits.move(64,64)
+        self.knop_duits.setFixedSize(200, 200)
 
-        self.feit_frans = QPushButton("fait")
-        self.feit_frans.clicked.connect(self.knop_is_ingedrukt)
+        self.knop_frans = QPushButton("générer des faits")
+        self.knop_frans.clicked.connect(self.knop_ingedrukt)
+        self.knop_frans.move(128,32)
+        self.knop_frans.setFixedSize(200, 200)
 
-        self.feit_nederlands = QPushButton("feit")
-        self.feit_nederlands.clicked.connect(self.knop_is_ingedrukt)
+        self.knop_nederlands = QPushButton("genereer feit")
+        self.knop_nederlands.clicked.connect(self.knop_ingedrukt)
+        self.knop_nederlands.move(128,64)
+        self.knop_nederlands.setFixedSize(200, 200)
 
-        self.setCentralWidget(self.)
-        self.setFixedSize(500, 500)
-
-    def knop_is_ingedrukt(self):
-        print("Ingedrukt")
-        nieuwe_scherm_titel = choice(scherm_titels)
-        print(f"Nieuwe titel is: {nieuwe_scherm_titel}")
-        self.setWindowTitle(nieuwe_scherm_titel)
+        self.setFixedSize(500, 700)
+        
+        layout = QGridLayout()
+        layout.addWidget(self.knop_engels, 2,0)
+        layout.addWidget(self.knop_nederlands, 2, 1)
+        layout.addWidget(self.knop_duits, 3, 0)
+        layout.addWidget(self.knop_frans, 3, 1)
+        self.setLayout(layout)
     
-    def scherm_titel_gewijzigd(self, scherm_titel):
-        print(f"De titel van het scherm is gewijzigd: {scherm_titel}")
+    def knop_ingedrukt(self):
+        print("Ingedrukt")
 
-        if scherm_titel == 'error':
-            self.knop.setDisabled(True)
-            print("Error: something went wrong, button disabled")
 
 app = QApplication([])
 scherm = MijnScherm()
