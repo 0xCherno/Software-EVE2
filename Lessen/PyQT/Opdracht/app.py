@@ -1,9 +1,7 @@
-#Importeren PyQt6
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
 
-#Importeren lijsten met feitjes
 from feiten_eng import Facts
 from feiten_nl import Feiten
 from feiten_frans import Faits
@@ -22,22 +20,26 @@ class MijnScherm(QWidget):
 
         self.setWindowTitle("4 Knoppen, 4 Talen & 50 feitjes!")
 
-        self.knop_engels = QPushButton("Generate fact")
+        self.knop_engels = QPushButton()
+        self.knop_engels.setText("Generate fact")
         self.knop_engels.clicked.connect(self.knop_ingedrukt)
         self.knop_engels.move(64,32)
         self.knop_engels.setFixedSize(200, 200)
 
-        self.knop_duits = QPushButton("Fakten erzeugen")
+        self.knop_duits = QPushButton()
+        self.knop_duits.setText("Fakten erzeugen")
         self.knop_duits.clicked.connect(self.knop_ingedrukt)
         self.knop_duits.move(64,64)
         self.knop_duits.setFixedSize(200, 200)
 
-        self.knop_frans = QPushButton("Générer des faits")
+        self.knop_frans = QPushButton()
+        self.knop_frans.setText("Générer des faits")
         self.knop_frans.clicked.connect(self.knop_ingedrukt)
         self.knop_frans.move(128,32)
         self.knop_frans.setFixedSize(200, 200)
 
-        self.knop_nederlands = QPushButton("Genereer feit")
+        self.knop_nederlands = QPushButton()
+        self.knop_nederlands.setText("Genereer feit")
         self.knop_nederlands.clicked.connect(self.knop_ingedrukt)
         self.knop_nederlands.move(128,64)
         self.knop_nederlands.setFixedSize(200, 200)
