@@ -1,28 +1,28 @@
+# ingredient.py
 class Ingredient:
-    def __init__(self, naam : str, hoeveelheid : int, eenheid : str, kcal : int):
+    def __init__(self, naam: str, hoeveelheid: float, eenheid: str, kcal: float):
         self.naam = naam
-        self.hoeveelheid = hoeveelheid
+        self.basis_hoeveelheid = hoeveelheid
+        self.hoeveelheid = hoeveelheid       
         self.eenheid = eenheid
-        self.kcal = int(kcal)
-        self.plantaardig_alternatief = Ingredient | None
+        self.basis_kcal = kcal             
+        self.kcal = kcal                    
+        self.plantaardig_alternatief = None 
 
-    def get_kcal(self):
-        return self.kcal
-    
-    def set_hoeveelheid(self, hoeveelheid):
-        self.hoeveelheid.append(hoeveelheid)
+    def scale(self, aantal_personen: int):
+        "Update de hoeveelheid en kcal op basis van het aantal personen."
+        self.hoeveelheid = self.basis_hoeveelheid * aantal_personen
+        self.kcal = self.basis_kcal * aantal_personen
 
-    def get_hoeveelheid(self):
-        return self.hoeveelheid
-    
-    def set_plantaardig_alternatief(self, alternatief):
-        self.plantaardig_alternatief = alternatief
-    
-    def get_ingredient(self, plantaardig):
-        if plantaardig == True:
+    def set_plantaardig_alternatief(self, alternatief_data):
+        "Stel een plantaardig alternatief in: (naam, hoeveelheid, eenheid, kcal)"
+        self.plantaardig_alternatief = Ingredient(*alternatief_data)
+
+    def get_ingredient(self, plantaardig: bool):
+        "Haal het plantaardige alternatief op als dit gewenst is en bestaat."
+        if plantaardig and self.plantaardig_alternatief is not None:
             return self.plantaardig_alternatief
-        else:
-            return self
+        return self
 
     def __str__(self):
-        return f"{self.hoeveelheid} {self.eenheid} {self.naam} {self.kcal}"
+        return f"{self.hoeveelheid} {self.eenheid} {self.naam} ({self.kcal} kcal)"
