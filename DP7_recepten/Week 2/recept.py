@@ -1,4 +1,3 @@
-# recept.py
 from ingredient import Ingredient
 from stap import Stap
 
@@ -8,7 +7,7 @@ class Recept:
         self.omschrijving = omschrijving
         self.ingredient_list = []
         self.stap_list = []
-        self.aantal_personen = 1  # standaard 1 persoon
+        self.aantal_personen = 1  
 
     def voeg_ingredient_toe(self, ingredient):
         self.ingredient_list.append(ingredient)
@@ -26,9 +25,8 @@ class Recept:
         self.stap_list.append(stap)
 
     def set_aantal_personen(self, aantal):
-        """
-        Stel het aantal personen in en update de hoeveelheden en kcal van alle ingrediënten.
-        """
+        "Stel het aantal personen in en update de hoeveelheden en kcal van alle ingrediënten." 
+  
         self.aantal_personen = aantal
         for ingredient in self.ingredient_list:
             ingredient.scale(aantal)
