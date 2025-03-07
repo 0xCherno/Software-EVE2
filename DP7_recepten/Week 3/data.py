@@ -7,7 +7,7 @@ class Data:
     recepten = []
 
     Studenten_Pasta_Carbonara = Recept("Studenten Pasta Carbonara", "Een goedkope versie van pasta Carbonara voor studenten!")
-    Anabolische_Kwark = Recept("Anabolische kwark", "Een grote bak kwark met 62 gram eiwit en <500 kcal!")
+    Anabolische_Kwark = Recept("Anabolische kwark", "Een grote bak kwark met 62 gram eiwit en <800 kcal!")
     Kip_Rijst_Brocoli = Recept("Kip Rijst en Broccoli", "Een gezonde maaltijd voor na het sporten")
 
     # Ingrediënten voor Studenten Pasta Carbonara
