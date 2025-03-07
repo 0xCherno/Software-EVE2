@@ -27,9 +27,11 @@ class Data:
 
     # Ingrediënten voor Anabolische Kwark
     Anabolische_Kwark.voeg_ingredient_toe(Ingredient("Magere kwark", 500, "gram", 250))
+    Anabolische_Kwark.ingredient_list[-1].set_plantaardig_alternatief(("Plantaardige kwark", 500, "gram", 300))
     Anabolische_Kwark.voeg_ingredient_toe(Ingredient("Proteïne poeder vanille", 30, "gram", 112))
     Anabolische_Kwark.voeg_ingredient_toe(Ingredient("Banaan", 100, "gram", 110))
     Anabolische_Kwark.voeg_ingredient_toe(Ingredient("Ongebrande cashewnoten", 25, "gram", 168))
+
     Anabolische_Kwark.voeg_stap_toe(Stap("Mix de proteïne poeder en kwark tot een egale mix"))
     Anabolische_Kwark.voeg_stap_toe(Stap("Voeg de banaan en cashewnoten toe"))
     Anabolische_Kwark.voeg_stap_toe(Stap("Serveer en geniet"))
@@ -37,10 +39,13 @@ class Data:
     # Ingrediënten voor Kip Rijst Broccoli
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Rijst", 75, "gram ongekookt", 248))
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Kipfilet", 200, "gram", 220))
+    Kip_Rijst_Brocoli.ingredient_list[-1].set_plantaardig_alternatief(("Tofu", 200, "gram", 180))
+    
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Groentemix", 300, "gram", 168))
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Gyros kruiden", 2, "gram", 2))
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Olijfolie", 5, "gram", 41))
     Kip_Rijst_Brocoli.voeg_ingredient_toe(Ingredient("Sriracha", 10, "gram", 13))
+
     Kip_Rijst_Brocoli.voeg_stap_toe(Stap("Marineer de kipfilet met de gyros kruiden"))
     Kip_Rijst_Brocoli.voeg_stap_toe(Stap("Bak de kipfilet in olijfolie"))
     Kip_Rijst_Brocoli.voeg_stap_toe(Stap("Verwarm de groentemix in de magnetron"))
