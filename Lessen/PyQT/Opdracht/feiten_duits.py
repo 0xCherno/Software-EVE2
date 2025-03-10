@@ -1,4 +1,3 @@
-# Liste der Fakten auf Deutsch
 Fakten = [
     "Eine Wolke wiegt etwa eine Million Tonnen.",
     "Eine typische Wolke hat ein Volumen von etwa 1 km3 und eine Dichte von etwa 1,003 kg pro m3.",
