@@ -1,3 +1,4 @@
+
 from ingredient import Ingredient
 from stap import Stap
 
@@ -7,7 +8,7 @@ class Recept:
         self.omschrijving = omschrijving
         self.ingredient_list = []
         self.stap_list = []
-        self.aantal_personen = 1 
+        self.aantal_personen = 1
 
     def voeg_ingredient_toe(self, ingredient):
         self.ingredient_list.append(ingredient)

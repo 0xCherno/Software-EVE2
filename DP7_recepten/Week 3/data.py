@@ -1,4 +1,3 @@
-# data.py
 from recept import Recept
 from ingredient import Ingredient
 from stap import Stap
