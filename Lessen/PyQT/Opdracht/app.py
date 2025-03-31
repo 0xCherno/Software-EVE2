@@ -48,6 +48,8 @@ class MijnScherm(QWidget):
         self.output_venster.move(250, 600)
         self.output_venster.setPlaceholderText("Output")
 
+        self.exit_knop = QCloseEvent
+
         self.setFixedSize(500, 700)
         
         layout = QGridLayout()
