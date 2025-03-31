@@ -1,4 +1,3 @@
-# ingredient.py
 class Ingredient:
     def __init__(self, naam: str, hoeveelheid: float, eenheid: str, kcal: float):
         self.naam = naam
